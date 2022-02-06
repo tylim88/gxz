@@ -1,4 +1,4 @@
-# FireLaw
+# gzx
 
 🦋 Deep Typing Function Composer
 
