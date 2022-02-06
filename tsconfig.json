@@ -16,8 +16,7 @@
 		"paths": {
 			"*": ["./*"]
 		},
-		"typeRoots": ["./node_modules/@types"],
-		"plugins": [{ "transform": "transformer-module" }]
+		"typeRoots": ["./node_modules/@types"]
 	},
 	"include": ["src/**/*"]
 }

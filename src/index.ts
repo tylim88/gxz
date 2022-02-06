@@ -1,1 +1,3 @@
-export const oz = 1
+const gxz = 1
+
+export default gxz
