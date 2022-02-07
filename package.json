@@ -1,7 +1,7 @@
 {
 	"name": "gxz",
-	"version": "0.0.0-beta.2",
-	"description": "🦋 Deep Typing Function Composer",
+	"version": "1.0.0",
+	"description": "🦋 Function Composer with smarter typing.",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"scripts": {
