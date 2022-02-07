@@ -2,5 +2,5 @@
 /dist
 /types
 /coverage
-firestore.rules
 **/*.tgz
+firestore.rules

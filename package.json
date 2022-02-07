@@ -14,7 +14,7 @@
 		"dev": "cross-env NODE_ENV=dev npm run build",
 		"pub": "cross-env NODE_ENV=prod npm run build && npm run tsc && npm publish",
 		"pre-commit": "npm run tsc && npm run lint --fix && npm run prettier",
-		"prepare": "husky install"
+		"pile": "ts-node src/index.ts"
 	},
 	"repository": {
 		"type": "git",
