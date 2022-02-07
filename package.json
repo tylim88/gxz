@@ -1,11 +1,11 @@
 {
 	"name": "gxz",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "🦋 Function Composer with smarter typing.",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"scripts": {
-		"reinstall": "rm -rf node_modules/ && rm -rf package-lock.json && npm i",
+		"rei": "rm -rf node_modules/ && rm -rf package-lock.json && npm i",
 		"lint": "eslint . --ext .ts",
 		"tsc": "tsc -p tsconfig.json",
 		"prettier": "npx pretty-quick --staged",

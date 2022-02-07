@@ -1,4 +1,4 @@
-# gzx
+# gxz
 
 [![npm](https://img.shields.io/npm/v/gxz)](https://www.npmjs.com/package/gxz) [![GitHub](https://img.shields.io/github/license/tylim88/gxz)](https://github.com/tylim88/gxz/blob/master/LICENSE) [![tylim88](https://circleci.com/gh/tylim88/gxz.svg?style=shield)](<[LINK](https://github.com/tylim88/gxz#gxz)>)
 
