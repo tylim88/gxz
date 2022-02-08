@@ -10,7 +10,7 @@
 		"tsc": "tsc -p tsconfig.json",
 		"prettier": "npx pretty-quick --staged",
 		"build": "rm -rf dist && rm -rf types && babel src --out-dir dist --extensions \".ts\"",
-		"test": "jest --coverage --silent",
+		"test": "jest --coverage --silent --collectCoverage=true",
 		"dev": "cross-env NODE_ENV=dev npm run build",
 		"pub": "cross-env NODE_ENV=prod npm run build && npm run tsc && npm publish",
 		"pre-commit": "npm run tsc && npm run lint --fix && npm run prettier",
