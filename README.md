@@ -1,6 +1,6 @@
 # gxz
 
-[![npm](https://img.shields.io/npm/v/gxz)](https://www.npmjs.com/package/gxz) [![GitHub](https://img.shields.io/github/license/tylim88/gxz)](https://github.com/tylim88/gxz/blob/master/LICENSE) [![tylim88](https://circleci.com/gh/tylim88/gxz.svg?style=shield)](<[LINK](https://github.com/tylim88/gxz#gxz)>)
+[![npm](https://img.shields.io/npm/v/gxz)](https://www.npmjs.com/package/gxz) [![GitHub](https://img.shields.io/github/license/tylim88/gxz)](https://github.com/tylim88/gxz/blob/master/LICENSE) [![circleci](https://circleci.com/gh/tylim88/gxz.svg?style=shield)](<[LINK](https://github.com/tylim88/gxz#gxz)>) [![codecov](https://codecov.io/gh/tylim88/gxz/branch/master/graph/badge.svg?token=IUUC7E1RTW)](https://codecov.io/gh/tylim88/gxz)
 
 🦋 Function Composer with smarter typing.
 
