@@ -5,48 +5,43 @@
 version: 2.1
 orbs:
   codecov: codecov/codecov@3.2.2
-jobs:
-  build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:14.18
+Run-With-Node:
+  docker:
+    # specify the version you desire here
+    - image: circleci/node:14.18
 
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
+    # Specify service dependencies here if necessary
+    # CircleCI maintains a library of pre-built images
+    # documented at https://circleci.com/docs/2.0/circleci-images/
+    # - image: circleci/mongo:3.4.4
 
-    working_directory: ~/repo
+  working_directory: ~/repo
 
-    parallelism: 4
+  parallelism: 4
 
-    steps:
-      - checkout
+  steps:
+    - checkout
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
+    # Download and cache dependencies
+    - restore_cache:
+        keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
 
-      - run: npm i
+    - run: npm i
 
-      - run: npm run lint
+    - run: npm run lint
 
-      - run: npm test
+    - run: npm test
 
-      - run: npm run build
+    - run: npm run build
 
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-workflows:
-  upload-to-codecov:
-    jobs:
-      - checkout
-      # https://medium.com/pixelmatters/part-2-how-to-integrate-circleci-codecov-into-your-project-step-by-step-8bb6a7d3a5c9
-      - codecov/upload:
-          file: './coverage/clover.xml'
-          token: ${CODECOV_TOKEN}
+    - save_cache:
+        paths:
+          - node_modules
+        key: v1-dependencies-{{ checksum "package.json" }}
+    # https://medium.com/pixelmatters/part-2-how-to-integrate-circleci-codecov-into-your-project-step-by-step-8bb6a7d3a5c9
+    - codecov/upload:
+        file: './coverage/clover.xml'
+        token: ${CODECOV_TOKEN}
