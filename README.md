@@ -43,3 +43,5 @@ compose('a') // Argument of type 'string' is not assignable to parameter of type
 gxz(a, c) // Argument of type '(arg: number) => "hello" | "world"' is not assignable to parameter of type '"return type does not match the next argument type"'.
 gxz(a) // Argument of type '(arg: number) => "hello" | "world"' is not assignable to parameter of type '"need at least 2 functions"'.
 ```
+
+1
