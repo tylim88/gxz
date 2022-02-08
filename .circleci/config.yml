@@ -35,10 +35,6 @@ jobs:
       - run: npm run lint
 
       - run: npm test
-      # https://medium.com/pixelmatters/part-2-how-to-integrate-circleci-codecov-into-your-project-step-by-step-8bb6a7d3a5c9
-      - codecov/upload:
-          file: './coverage/clover.xml'
-          token: ${CODECOV_TOKEN}
 
       - run: npm run build
 
@@ -46,3 +42,11 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+workflows:
+  upload-to-codecov:
+    jobs:
+      - checkout
+      # https://medium.com/pixelmatters/part-2-how-to-integrate-circleci-codecov-into-your-project-step-by-step-8bb6a7d3a5c9
+      - codecov/upload:
+          file: './coverage/clover.xml'
+          token: ${CODECOV_TOKEN}
