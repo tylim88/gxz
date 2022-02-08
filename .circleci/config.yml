@@ -4,7 +4,7 @@
 #
 version: 2.1
 orbs:
-  codecov: codecov/codecov@1.0.2
+  codecov: codecov/codecov@3.2.2
 jobs:
   build:
     docker:
@@ -35,9 +35,10 @@ jobs:
       - run: npm run lint
 
       - run: npm test
-      # https://circleci.com/blog/making-code-coverage-easy-to-see-with-the-codecov-orb/
+      # https://medium.com/pixelmatters/part-2-how-to-integrate-circleci-codecov-into-your-project-step-by-step-8bb6a7d3a5c9
       - codecov/upload:
           file: './coverage/clover.xml'
+          token: fbfc9dfe-c2f5-4f7c-8bfe-82df189af00c
 
       - run: npm run build
 
