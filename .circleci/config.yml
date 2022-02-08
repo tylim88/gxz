@@ -2,7 +2,9 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
-version: 2
+version: 2.1
+orbs:
+  codecov: codecov/codecov@1.0.2
 jobs:
   build:
     docker:
@@ -33,6 +35,9 @@ jobs:
       - run: npm run lint
 
       - run: npm test
+      # https://circleci.com/blog/making-code-coverage-easy-to-see-with-the-codecov-orb/
+      - codecov/upload:
+          file: './coverage/clover.xml'
 
       - run: npm run build
 
