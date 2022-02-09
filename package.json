@@ -1,7 +1,7 @@
 {
 	"name": "gxz",
-	"version": "1.0.2",
-	"description": "🦋 Function Composer with smarter typing.",
+	"version": "1.0.3",
+	"description": "🦋 Function Composer with deep typing.",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"scripts": {
@@ -14,7 +14,8 @@
 		"dev": "cross-env NODE_ENV=dev npm run build",
 		"pub": "cross-env NODE_ENV=prod npm run build && npm run tsc && npm publish",
 		"pre-commit": "npm run tsc && npm run lint --fix && npm run prettier",
-		"pile": "ts-node src/index.ts"
+		"pile": "ts-node src/index.ts",
+		"doc": "jsDoc dist/index.js README.md"
 	},
 	"repository": {
 		"type": "git",

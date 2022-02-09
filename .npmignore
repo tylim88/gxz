@@ -5,6 +5,7 @@
 /src
 /coverage
 /.husky
+/out
 
 # ignore file
 .gitignore

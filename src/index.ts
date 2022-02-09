@@ -36,6 +36,12 @@ type GetLastReturn<T extends ((...args: any) => any)[]> = T extends [
 		: never
 	: never
 
+/**
+ * Functions Composer.
+ * @param {...callback} args at least 2 callbacks, the n callback's return type must match the n+1 callback's parameter type.
+ * @return return a callback: the parameter type is the parameter type of the first callback in args and the return type is the return type of the last callback in args.
+ */
+
 const gxz = <T extends ((...args: any) => any)[]>(
 	...args: Compose<T> extends true ? T : Compose<T>[]
 ) => {
