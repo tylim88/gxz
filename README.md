@@ -14,7 +14,7 @@ npm i gxz
 
 In this example:
 
-1. the return type of `a` is `number` and parameter type of `b` is number
+1. the return type of `a` is `string` and parameter type of `b` is also `string`
 2. So it is possible to compose `a` to `b`, but not the other way around
 3. It is not possible to compose `c` to `a` but it is possible to compose `b` to `c` because `b` returns `boolean`
 
