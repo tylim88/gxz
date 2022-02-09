@@ -7,15 +7,13 @@
 	"scripts": {
 		"rei": "rm -rf node_modules/ && rm -rf package-lock.json && npm i",
 		"lint": "eslint . --ext .ts",
-		"tsc": "tsc -p tsconfig.json",
+		"tsc": "tsc",
 		"prettier": "npx pretty-quick --staged",
 		"build": "rm -rf dist && rm -rf types && babel src --out-dir dist --extensions \".ts\"",
 		"test": "jest",
-		"dev": "cross-env NODE_ENV=dev npm run build",
 		"pub": "cross-env NODE_ENV=prod npm run build && npm run tsc && npm publish",
 		"pre-commit": "npm run tsc && npm run lint --fix && npm run prettier",
-		"pile": "ts-node src/index.ts",
-		"doc": "jsDoc dist/index.js README.md"
+		"pile": "cross-env NODE_ENV=dev ts-node src/index.ts"
 	},
 	"repository": {
 		"type": "git",
