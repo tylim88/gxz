@@ -11,9 +11,9 @@
 		"prettier": "npx pretty-quick --staged",
 		"build": "rm -rf dist && babel src --out-dir dist --extensions \".ts\"",
 		"test": "jest",
+		"dev": "cross-env NODE_ENV=dev ts-node src/index.ts",
 		"pub": "cross-env NODE_ENV=prod npm run build && npm run tsc && npm publish",
-		"pre-commit": "npm run tsc && npm run lint --fix && npm run prettier",
-		"pile": "cross-env NODE_ENV=dev ts-node src/index.ts"
+		"pre-commit": "npm run tsc && npm run lint --fix && npm run prettier"
 	},
 	"repository": {
 		"type": "git",
