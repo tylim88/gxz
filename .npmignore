@@ -17,6 +17,7 @@ tsconfig.json
 .eslintrc.js
 .prettierrc.js
 babel.config.js    
+.codecov.yml
 
 # types
 /types/**/*
