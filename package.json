@@ -1,6 +1,6 @@
 {
 	"name": "gxz",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"description": "🦋 Function Composer with deep typing.",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
