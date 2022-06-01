@@ -12,11 +12,9 @@ npm i gxz
 
 ## 🎵 Usage
 
-In this example:
+This composer guarantee the return type of `n` callback match the parameter type of `n+1` callback.
 
-1. the return type of `a` is `string` and parameter type of `b` is also `string`
-2. So it is possible to compose `a` to `b`, but not the other way around
-3. It is not possible to compose `c` to `a` but it is possible to compose `b` to `c` because `b` returns `boolean`
+Every callback should only have one parameter, ts will warn you if you have more than one or 0 parameters.
 
 ```ts
 import gxz from 'gxz'
